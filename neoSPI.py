@@ -98,7 +98,7 @@ class NeoPixel:
                 raise NotImplementedError("2D slicing not supported")
             if (not isinstance(ind1, int)) or (not isinstance(ind2, int)):
                 raise IndexError("Indecies must be integers")
-            if ind1 < 0 or ind2 >= n or ind2 < 0 or ind2 >= 3:
+            if ind1 < -n or ind1 >= n or ind2 < 0 or ind2 >= 3:
                 raise IndexError("Pixel index out of range")
             ind1 *= 12
             ind1 += ind2 * 4
@@ -116,7 +116,7 @@ class NeoPixel:
         data = self._data
         n = self._n
         if isinstance(index, int):
-            if index < 0 or index >= n:
+            if index < -n or index >= n:
                 raise IndexError("Pixel index out of range")
             if not isinstance(value, tuple) or len(value) != 3:
                 raise ValueError("Pixel value must be a 3-tuple")
@@ -132,7 +132,7 @@ class NeoPixel:
                 raise NotImplementedError("2D slice assignment not supported")
             if (not isinstance(ind1, int)) or (not isinstance(ind2, int)):
                 raise IndexError("Indecies must be integers")
-            if ind1 < 0 or ind2 >= n or ind2 < 0 or ind2 >= 3:
+            if ind1 < -n or ind1 >= n or ind2 < 0 or ind2 >= 3:
                 raise IndexError("Pixel index out of range")
             if not isinstance(value, int) or value<0 or value>255:
                 raise ValueError("Pixel value must be an integer in range 0 to 255")
