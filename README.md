@@ -1,4 +1,4 @@
-# ws2812-SIP
+# ws2812-SPI
 An efficient micropython WS2812 (NeoPixel) driver
 
 This library allows for easy access to a set of WS2812 RGB LEDs
