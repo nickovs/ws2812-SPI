@@ -31,5 +31,7 @@ np[2,2] = 255
 np[4] = np[1]
 # Copy the first 16 pixels to the last 16 pixels
 np[-16:] = np[:16]
+# Send the data out to the pixels
+np.write()
 ```
 
