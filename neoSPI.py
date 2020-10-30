@@ -174,3 +174,6 @@ class NeoPixel:
         del head, tail
         gc.collect()
 
+    @property
+    def n(self):
+        return self._n
